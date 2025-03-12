@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import TodoList from './TodoList.jsx';
-import TodoForm from './TodoForm.jsx';
-import Comments from "./components/comment.jsx";
-import './components/comment.css';
+import TodoList from '../components/TodoList.jsx';
+import TodoForm from '../components/TodoForm.jsx';
+import Comments from "../components/Comment.jsx";
+import '../components/comment.css';
 
 
-function App() {
+function Page() {
   const [todos, setTodos] = useState([]);
 
   const addTodo = (text) => {
@@ -34,4 +34,4 @@ function App() {
   );
 }
 
-export default App;
+export default Page;

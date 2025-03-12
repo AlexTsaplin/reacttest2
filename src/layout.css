@@ -1,0 +1,67 @@
+/* Header Styles */
+.appbar {
+    background-color: #007bff;
+    color: white;
+    padding: 16px;
+    display: flex;
+    align-items: center; /* Центрування по вертикалі */
+    justify-content: space-between; /* Розташування елементів по горизонталі */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Заголовок (назва додатку) */
+.appbar-title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Іконка меню для мобільних пристроїв */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Основне меню (навігація) */
+.nav {
+    display: flex;
+    gap: 20px; /* Відступ між пунктами меню */
+    list-style: none;
+    margin-left: auto; /* Це дозволить розмістити меню справа */
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffd700; /* Жовтий колір при наведенні */
+    text-decoration: underline;
+}
+
+/* Адаптивний стиль для мобільних пристроїв */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Показуємо іконку меню на маленьких екранах */
+    }
+
+    .nav {
+        display: none; /* Сховуємо навігацію на мобільних пристроях */
+    }
+
+    .nav.open {
+        display: flex;
+        flex-direction: column;
+        gap: 8px; /* Відступ між пунктами меню при відкритому меню */
+    }
+}
